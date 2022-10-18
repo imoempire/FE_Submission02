@@ -1,0 +1,193 @@
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Quicksand', sans-serif;
+ }
+ 
+ .main {
+   position: relative;
+   background: #ffffff;
+   min-height: 100vh;
+   width: calc(100% - 240px);
+   left: 240px;
+   padding: 4rem 2rem 1rem .1rem;
+   transition: all 0.5s ease;
+ }
+ 
+ nav.active~.main {
+   width: calc(100% - 60px);
+   left: 60px;
+ }
+ 
+ .main nav {
+   display: flex;
+   justify-content: space-between;
+   height: 60px;
+   background: #fff;
+   display: flex;
+   align-items: center;
+   position: fixed;
+   width: calc(100% - 240px);
+   padding: 0 2rem;
+   transition: all 0.5s ease;
+ }
+ 
+ nav.active~.main nav {
+   left: 60px;
+   width: calc(100% - 60px);
+ }
+ 
+ .dashboard .Tabs {
+   display: flex;
+   flex-direction: row;
+   gap: .7rem;
+ }
+ 
+ .dashboard .Tabs .tab {
+   border: 3px solid #d6d6d6;
+   width: 15rem;
+   margin-top: 2rem;
+   padding: .6rem
+ }
+ 
+ .tab .period,
+ .amount {
+   font-size: .9em;
+   color: #504f4f;
+ }
+ 
+ .tab .amount{
+   margin-top: .2rem;
+ }
+ 
+ /* Revenue */
+ .Revenue_section {
+   margin-top: 2.5rem;
+   width: 78%;
+ }
+ 
+ 
+ /* Switch */
+ .switch {
+   position: relative;
+   display: inline-block;
+   width: 60px;
+   height: 34px;
+ }
+ 
+ .switch input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+ }
+ 
+ .slider {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: -3px;
+   border: 1px solid #ccc;
+   -webkit-transition: .4s;
+   transition: .4s;
+ }
+ 
+ .slider:before {
+   position: absolute;
+   content: "";
+   height: 26px;
+   width: 26px;
+   left: 2px;
+   bottom: 4px;
+   background-color: white;
+   border: 1px solid #ccc;
+   -webkit-transition: .4s;
+   transition: .4s;
+ }
+ 
+ input:focus+.slider {
+   box-shadow: 0 0 1px #2196F3;
+ }
+ 
+ input:checked+.slider:before {
+   -webkit-transform: translateX(26px);
+   -ms-transform: translateX(26px);
+   transform: translateX(26px);
+ }
+ 
+ /* Rounded sliders */
+ .slider.round {
+   border-radius: 34px;
+ }
+ 
+ .slider.round:before {
+   border-radius: 50%;
+ }
+ 
+ .Revenue_section .card {
+   border: 3px solid #d6d6d6;
+   width: 100%;
+   height: 390px;
+   padding: 1rem;
+   margin-top: 2rem;
+   position: relative;
+ }
+ .Revenue_section .card canvas {
+   position: absolute;
+ }
+ 
+ .seeT {
+   display: none !important;
+ }
+ 
+ .revenue_head {
+   display: flex;
+   justify-content: space-between;                     
+ }
+ 
+ 
+ /* Best Sellers */
+ .bestseller {
+   margin-top:  2rem;
+ }
+ 
+ .bestseller .card {
+   border: 3px solid #d6d6d6;
+   width: 100%;
+   height:fit-content;
+   padding: 1rem;
+   margin-top: 2rem;
+ }
+ 
+ /* Table */
+ 
+ th {
+   color: #5e5e5e;
+   text-align: left;
+ }
+ 
+ thead tr th{
+   margin: 0 10px;
+   font-size: 18px
+ }
+ 
+ thead tr th:nth-child(2){
+   margin: 0 -40px;
+   font-size: 18px;
+ }
+ 
+ tbody tr td {
+   font-size: 18px;
+   padding: 20px 0;
+ }
+ 
+ tbody tr td:nth-child(2) {
+   text-align: center;
+   font-size: 18px;
+   padding: 20px 0;
+ }
+ 
+ 

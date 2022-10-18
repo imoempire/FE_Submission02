@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+
+header {
+   position: fixed;
+   z-index: 3;
+   width: 100%;
+   height:2.5rem;
+   background-color: #1f2e78;
+   display: flex;
+   align-items: center;
+ }
+ .circle-btn{
+   border-radius:100%;
+   background:white;
+   height:1.8rem;
+   width: 1.8rem;
+   margin: 4px;
+ }
+ .circle-btn:nth-child(1) { background:#e02020}
+ .circle-btn:nth-child(2) { background:#f7b500}
+ .circle-btn:nth-child(3) {background:#6dd400}
+ 
+
+ /* Navbar Starts Here */
+nav {
+   position: fixed;
+   height: 100%;
+   width: 200px;
+   transition: all 0.5s ease;
+   border-right: #9c9c9cd0 2px solid;
+   align-items: center;
+ }
+ 
+ nav .active {
+   width: 50px;
+ }
+ 
+ nav .logo {
+   margin-top: 5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ nav .nav-links {
+   margin-top: 2rem;
+ }
+ 
+ nav .nav-links li {
+   position: relative;
+   list-style: none;
+   height: 50px;
+ }
+ 
+ nav .nav-links li a {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   padding: 0 3rem;
+   text-decoration: none;
+   transition: all 0.4s ease;
+ }
+ 
+ nav .nav-links li a.active {
+   background: #f1f1f1;
+ }
+ 
+ nav .nav-links li a:hover {
+   background: #f0f0f0;
+ }
+ nav .nav-links li a:focus {
+   border: 1px solid#acacac;
+ }
+ 
+ nav .nav-links li i {
+   min-width: 60px;
+   text-align: center;
+   font-size: 18px;
+   color: #272727;
+ }
+ 
+ nav .nav-links li a .links_name {
+   color: #353535;
+   font-size: 15px;
+   font-weight: 400;
+   white-space: nowrap;
+ }
+ 
+ nav .nav-links .log_out {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+ }
+ 
+ /* Navbar Ends */
+
+
+ .title {
+   font-size: 1.3rem;
+   color: #5e5e5e;
+}
+
+.catTable {
+   align-items: flex-start;
+}
+
+.pagination {
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   align-items: center;
+   gap: .5rem;
+   margin: 1rem 0;
+ }
+ 
+ .pagination a {
+   text-align: center;
+   font-size: 1rem;
+   color: #000
+ }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/dashboard.css" />
+    <link rel="stylesheet" href="../index.css" />
+
+    <title>Dashboard | Freddys</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+      integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="circle-btn"></div>
+      <div class="circle-btn"></div>
+      <div class="circle-btn"></div>
+    </header>
+
+    <nav>
+      <div class="logo">
+        <img src="./Asset/Freddys_Logo.svg" width="100px" height="100px" />
+      </div>
+      <div class="links">
+        <ul class="nav-links">
+          <li>
+            <a href="./dashboard.html" class="active">
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="./order.html">
+              <span class="links_name">Orders</span>
+            </a>
+          </li>
+          <li>
+            <a class="logout" onclick="logout()">
+              <span class="links_name">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="main">
+      <div class="dashboard">
+        <span class="title">Dashboard</span>
+        <!-- Tabs -->
+        <div class="Tabs">
+          <div class="tab">
+            <div class="period">Today</div>
+            <div class="amount day"></div>
+          </div>
+          <div class="tab">
+            <div class="period">Last Week</div>
+            <div class="amount week"></div>
+          </div>
+          <div class="tab">
+            <div class="period">Today</div>
+            <div class="amount year"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Revenue Section -->
+      <div class="Revenue_section">
+        <div class="revenue_head">
+          <div class="title">
+            Revenue (Last <span class="myD">7 Days)</span
+            ><span class="seeT">12 Months)</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="revtoggle" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="card">
+          <canvas id="myDays" class="myDays" width="100%" height="40"></canvas>
+          <canvas
+            id="myMonths"
+            class="myMonths seeT"
+            width="100%"
+            height="40"
+          ></canvas>
+        </div>
+      </div>
+
+      <!-- Best Sellers Section -->
+      <div class="bestseller">
+        <span class="title">Bestsellers</span>
+        <div class="card">
+          <table id="catTable" width="100%">
+            <thead>
+              <tr>
+                <th data-sort="name">Product Name</th>
+                <th data-sort="init">#Unit Sold</th>
+                <th data-sort="rev">Revenue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="3"><i>Loading...</i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <a href="javascript:prevPage()" id="btn_prev"
+            ><i class="fa fa-caret-left" aria-hidden="true"></i
+          ></a>
+          page <span id="page_at"></span> of <span id="page_total"></span>
+          <a href="javascript:nextPage()" id="btn_next"
+            ><i class="fa fa-caret-right" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>
