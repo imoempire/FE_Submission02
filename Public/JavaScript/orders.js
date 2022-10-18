@@ -17,14 +17,12 @@ async function getData(link, token_type, Method) {
     });
     return await response.json();
 }
-// TABLE LOGIC 
 function renderTable(blockDATA, pageNow) {
     // create html
     let result = '';
     blockDATA.forEach(row => {
         const {product, created_at, total, status} = row;
         let created = created_at.substring(0, 10);
-        // console.log(product, created_at, total, created);
         result += `<tr>
         <td>${product["name"]}</td>
         <td>${created}</td>
@@ -55,7 +53,6 @@ async function prevPage() {
     if (current_page > 1) { 
         current_page--;
         intDATA = await getData(`orders?page=${current_page}`, "access_token", "GET");
-        // console.log(intDATA.orders);
         renderTable(intDATA.orders, current_page);
     }
 }
@@ -63,12 +60,10 @@ async function prevPage() {
 async function nextPage() {
     current_page++;
     intDATA = await getData(`orders?page=${current_page}`, "access_token", "GET");
-    // console.log(intDATA.orders);
     renderTable(intDATA.orders, current_page);
 }
 async function search(srchParam) {
     const searchData = await getData(`orders?page=${current_page}&q=${srchParam.value}`, "access_token", "GET");
-    // console.log(searchData);
     if (searchData.msg) {
         alert(searchData.msg);
     } else {
@@ -86,18 +81,15 @@ function numPages(DATA) {
 window.onload = async function () {
     if (sessionStorage.getItem("access_token")) {
         intDATA = await getData(`orders?page=${current_page}`, "access_token", "GET");
-        // console.log(intDATA.orders);
         if (intDATA.msg) {
             alert(intDATA.msg);
         } else {
-            // records_per_page = intDATA.orders.length;
             current_page = intDATA.page;
             totalPages = intDATA.total;
             renderTable(intDATA.orders, current_page);
         }
         setInterval(async function () {
             newToken = await getData("refresh", "refresh_token", "POST");
-            // console.log(newToken);
             if (newToken.msg) {
                 alert(newToken.msg);
             } else {
