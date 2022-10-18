@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/orders.css" />
+    <link rel="stylesheet" href="../index.css">
+
+    <title>Orders | Freddys</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+     <header>
+      <div class="circle-btn"></div>
+      <div class="circle-btn"></div>
+      <div class="circle-btn"></div>
+    </header>
+    <nav>
+      <div class="logo">
+        <img src="./Asset/Freddys_Logo.svg" width="100px" height="100px" />
+      </div>
+      <div class="links">
+        <ul class="nav-links">
+          <li>
+            <a href="./dashboard.html" class="active">
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="./order.html">
+              <span class="links_name">Orders</span>
+            </a>
+          </li>
+          <li>
+            <a class="logout" onclick="logout()">
+              <span class="links_name">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="main">
+      <nav>
+        <div class="sidebar-button">
+          <span class="title">Orders</span>
+        </div>
+        <div class="search-box">
+          <a>
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Search..."
+            onKeyUp="search(this)"
+          />
+        </div>
+      </nav>
+      <div class="orders_container">
+        <div class="card">
+          <table id="catTable" width="100%">
+            <thead>
+              <tr>
+                <th data-sort="name">Product Name</th>
+                <th data-sort="date">Date</th>
+                <th data-sort="total">Total</th>
+                <th data-sort="status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4"><i>Loading...</i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <a href="javascript:prevPage()" id="btn_prev"
+            ><i class="fa fa-caret-left" aria-hidden="true"></i
+          ></a>
+          page <span id="page_at"></span> of <span id="page_total"></span>
+          <a href="javascript:nextPage()" id="btn_next"
+            ><i class="fa fa-caret-right" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

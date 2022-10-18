@@ -1,0 +1,63 @@
+/* @import url('../../index.css'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Quicksand', sans-serif;
+}
+
+.main {
+    position: relative;
+    background: #ffffff;
+    min-height: 100vh;
+    width: calc(100% - 240px);
+    left: 240px;
+    transition: all 0.5s ease;
+    padding-top: 2.5rem;
+}
+
+.main nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 240px);
+    padding: 0 2rem;
+    transition: all 0.5s ease;
+}
+
+nav .search-box input {
+    height: 100%;
+    border: 1px solid #b3b3b3;
+    font-size: 18px;
+    padding: 0.2rem 1rem;
+    margin-right: 1rem;
+}
+
+.orders_container {
+    padding-top: 4rem;
+    align-items: center;
+    justify-content: unpleaset;
+}
+
+.orders_container .card {
+    border: 3px solid #d6d6d6;
+    width: 96%;
+    height: fit-content;
+    padding: 1rem;
+    margin: 2%;
+}
+
+
+th {
+    color: #5e5e5e;
+    text-align: left;
+}
+
+table tbody tr td:nth-child(1) {
+    width: 25rem;
+}
